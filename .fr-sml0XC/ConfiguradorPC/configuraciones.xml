@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<listPcWrapper>
+    <PC>
+        <componentes>
+            <cantidad>1</cantidad>
+            <categoria>MOTHERBOARD</categoria>
+            <descripcion>gigabyte ga 78lmt usb3 am3 4ddr3 hdmi usb3.0 matx</descripcion>
+            <iva>11.749</iva>
+            <precio>55.95</precio>
+            <stock>7</stock>
+            <total>67.7</total>
+        </componentes>
+        <componentes>
+            <cantidad>2</cantidad>
+            <categoria>CPU</categoria>
+            <descripcion>intel. core i5 4460 3.20ghz 1150 box</descripcion>
+            <iva>37.227</iva>
+            <precio>177.27</precio>
+            <stock>26</stock>
+            <total>428.993</total>
+        </componentes>
+        <componentes>
+            <cantidad>1</cantidad>
+            <categoria>RAM</categoria>
+            <descripcion>kingston 8gb 1600 ddr3 cl10 dimm hyperx furyser</descripcion>
+            <iva>7.15</iva>
+            <precio>34.05</precio>
+            <stock>108</stock>
+            <total>41.2</total>
+        </componentes>
+        <componentes>
+            <cantidad>1</cantidad>
+            <categoria>HDD</categoria>
+            <descripcion>toshiba hdd 3.5 1tb 32mb sata3 7200rpm</descripcion>
+            <iva>8.226</iva>
+            <precio>39.17</precio>
+            <stock>785</stock>
+            <total>47.396</total>
+        </componentes>
+        <componentes>
+            <cantidad>1</cantidad>
+            <categoria>CASE</categoria>
+            <descripcion>unyka uk 6011 matx 500w negra</descripcion>
+            <iva>6.56</iva>
+            <precio>31.24</precio>
+            <stock>103</stock>
+            <total>37.8</total>
+        </componentes>
+        <componentes>
+            <cantidad>1</cantidad>
+            <categoria>GPU</categoria>
+            <descripcion>vga msi n210 md1gd3h lp 1gb gddr3</descripcion>
+            <iva>6.161</iva>
+            <precio>29.34</precio>
+            <stock>60</stock>
+            <total>35.501</total>
+        </componentes>
+        <nombre>HOLI</nombre>
+    </PC>
+    <PC>
+        <componentes>
+            <cantidad>1</cantidad>
+            <categoria>MOTHERBOARD</categoria>
+            <descripcion>gigabyte ga 78lmt usb3 am3 4ddr3 hdmi usb3.0 matx</descripcion>
+            <iva>11.749</iva>
+            <precio>55.95</precio>
+            <stock>7</stock>
+            <total>67.7</total>
+        </componentes>
+        <componentes>
+            <cantidad>1</cantidad>
+            <categoria>CPU</categoria>
+            <descripcion>intel core i3.4170 3.7ghz s1150 3mb</descripcion>
+            <iva>22.424</iva>
+            <precio>106.78</precio>
+            <stock>25</stock>
+            <total>129.204</total>
+        </componentes>
+        <componentes>
+            <cantidad>2</cantidad>
+            <categoria>RAM</categoria>
+            <descripcion>kingston 8gb 1600 ddr3 cl10 dimm hyperx furyser</descripcion>
+            <iva>7.15</iva>
+            <precio>34.05</precio>
+            <stock>108</stock>
+            <total>82.401</total>
+        </componentes>
+        <componentes>
+            <cantidad>1</cantidad>
+            <categoria>GPU</categoria>
+            <descripcion>gigabyte vga gtx 750 ti oc 2gb ddr5</descripcion>
+            <iva>23.239</iva>
+            <precio>110.66</precio>
+            <stock>396</stock>
+            <total>133.899</total>
+        </componentes>
+        <componentes>
+            <cantidad>1</cantidad>
+            <categoria>HDD</categoria>
+            <descripcion>seagate 1tb sata3 7200 64mb barracuda</descripcion>
+            <iva>9.095</iva>
+            <precio>43.31</precio>
+            <stock>182</stock>
+            <total>52.405</total>
+        </componentes>
+        <componentes>
+            <cantidad>1</cantidad>
+            <categoria>CASE</categoria>
+            <descripcion>unyka caja micro atx 500w uk3807 negra</descripcion>
+            <iva>5.242</iva>
+            <precio>24.96</precio>
+            <stock>14</stock>
+            <total>30.202</total>
+        </componentes>
+        <nombre>PA TI MI COLI</nombre>
+    </PC>
+    <PC>
+        <componentes>
+            <cantidad>1</cantidad>
+            <categoria>MOTHERBOARD</categoria>
+            <descripcion>gigabyte ga 78lmt usb3 am3 4ddr3 hdmi usb3.0 matx</descripcion>
+            <iva>11.749</iva>
+            <precio>55.95</precio>
+            <stock>7</stock>
+            <total>67.7</total>
+        </componentes>
+        <componentes>
+            <cantidad>2</cantidad>
+            <categoria>CPU</categoria>
+            <descripcion>intel. core i5 4460 3.20ghz 1150 box</descripcion>
+            <iva>37.227</iva>
+            <precio>177.27</precio>
+            <stock>26</stock>
+            <total>428.993</total>
+        </componentes>
+        <componentes>
+            <cantidad>1</cantidad>
+            <categoria>RAM</categoria>
+            <descripcion>kingston 8gb 1600 ddr3 cl10 dimm hyperx furyser</descripcion>
+            <iva>7.15</iva>
+            <precio>34.05</precio>
+            <stock>108</stock>
+            <total>41.2</total>
+        </componentes>
+        <componentes>
+            <cantidad>1</cantidad>
+            <categoria>HDD</categoria>
+            <descripcion>toshiba hdd 3.5 1tb 32mb sata3 7200rpm</descripcion>
+            <iva>8.226</iva>
+            <precio>39.17</precio>
+            <stock>785</stock>
+            <total>47.396</total>
+        </componentes>
+        <componentes>
+            <cantidad>1</cantidad>
+            <categoria>CASE</categoria>
+            <descripcion>unyka uk 6011 matx 500w negra</descripcion>
+            <iva>6.56</iva>
+            <precio>31.24</precio>
+            <stock>103</stock>
+            <total>37.8</total>
+        </componentes>
+        <componentes>
+            <cantidad>1</cantidad>
+            <categoria>GPU</categoria>
+            <descripcion>vga msi n210 md1gd3h lp 1gb gddr3</descripcion>
+            <iva>6.161</iva>
+            <precio>29.34</precio>
+            <stock>60</stock>
+            <total>35.501</total>
+        </componentes>
+        <nombre>asd</nombre>
+    </PC>
+    <PC>
+        <componentes>
+            <cantidad>1</cantidad>
+            <categoria>MOTHERBOARD</categoria>
+            <descripcion>gigabyte ga 78lmt usb3 am3 4ddr3 hdmi usb3.0 matx</descripcion>
+            <iva>11.749</iva>
+            <precio>55.95</precio>
+            <stock>7</stock>
+            <total>67.7</total>
+        </componentes>
+        <componentes>
+            <cantidad>2</cantidad>
+            <categoria>CPU</categoria>
+            <descripcion>intel. core i5 4460 3.20ghz 1150 box</descripcion>
+            <iva>37.227</iva>
+            <precio>177.27</precio>
+            <stock>26</stock>
+            <total>428.993</total>
+        </componentes>
+        <componentes>
+            <cantidad>1</cantidad>
+            <categoria>RAM</categoria>
+            <descripcion>kingston 8gb 1600 ddr3 cl10 dimm hyperx furyser</descripcion>
+            <iva>7.15</iva>
+            <precio>34.05</precio>
+            <stock>108</stock>
+            <total>41.2</total>
+        </componentes>
+        <componentes>
+            <cantidad>1</cantidad>
+            <categoria>HDD</categoria>
+            <descripcion>toshiba hdd 3.5 1tb 32mb sata3 7200rpm</descripcion>
+            <iva>8.226</iva>
+            <precio>39.17</precio>
+            <stock>785</stock>
+            <total>47.396</total>
+        </componentes>
+        <componentes>
+            <cantidad>1</cantidad>
+            <categoria>CASE</categoria>
+            <descripcion>unyka uk 6011 matx 500w negra</descripcion>
+            <iva>6.56</iva>
+            <precio>31.24</precio>
+            <stock>103</stock>
+            <total>37.8</total>
+        </componentes>
+        <componentes>
+            <cantidad>1</cantidad>
+            <categoria>GPU</categoria>
+            <descripcion>vga msi n210 md1gd3h lp 1gb gddr3</descripcion>
+            <iva>6.161</iva>
+            <precio>29.34</precio>
+            <stock>60</stock>
+            <total>35.501</total>
+        </componentes>
+        <nombre>asd</nombre>
+    </PC>
+    <PC>
+        <componentes>
+            <cantidad>1</cantidad>
+            <categoria>MOTHERBOARD</categoria>
+            <descripcion>gigabyte ga 78lmt usb3 am3 4ddr3 hdmi usb3.0 matx</descripcion>
+            <iva>11.749</iva>
+            <precio>55.95</precio>
+            <stock>7</stock>
+            <total>67.7</total>
+        </componentes>
+        <componentes>
+            <cantidad>1</cantidad>
+            <categoria>CPU</categoria>
+            <descripcion>intel core i3.4170 3.7ghz s1150 3mb</descripcion>
+            <iva>22.424</iva>
+            <precio>106.78</precio>
+            <stock>25</stock>
+            <total>129.204</total>
+        </componentes>
+        <componentes>
+            <cantidad>2</cantidad>
+            <categoria>RAM</categoria>
+            <descripcion>kingston 8gb 1600 ddr3 cl10 dimm hyperx furyser</descripcion>
+            <iva>7.15</iva>
+            <precio>34.05</precio>
+            <stock>108</stock>
+            <total>82.401</total>
+        </componentes>
+        <componentes>
+            <cantidad>1</cantidad>
+            <categoria>GPU</categoria>
+            <descripcion>gigabyte vga gtx 750 ti oc 2gb ddr5</descripcion>
+            <iva>23.239</iva>
+            <precio>110.66</precio>
+            <stock>396</stock>
+            <total>133.899</total>
+        </componentes>
+        <componentes>
+            <cantidad>1</cantidad>
+            <categoria>HDD</categoria>
+            <descripcion>seagate 1tb sata3 7200 64mb barracuda</descripcion>
+            <iva>9.095</iva>
+            <precio>43.31</precio>
+            <stock>182</stock>
+            <total>52.405</total>
+        </componentes>
+        <componentes>
+            <cantidad>1</cantidad>
+            <categoria>CASE</categoria>
+            <descripcion>unyka caja micro atx 500w uk3807 negra</descripcion>
+            <iva>5.242</iva>
+            <precio>24.96</precio>
+            <stock>14</stock>
+            <total>30.202</total>
+        </componentes>
+        <nombre>pene</nombre>
+    </PC>
+</listPcWrapper>
