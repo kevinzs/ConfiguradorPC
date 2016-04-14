@@ -73,10 +73,8 @@ public class VistaConfiguracionControlador implements Initializable {
     @FXML private MenuItem cerrarMenu;
     @FXML private MenuItem modificarMenu;
     @FXML private MenuItem eliminarMenu;
-    @FXML
-    private TextField nombreTextfield;
-    @FXML
-    private BorderPane bp;
+    @FXML private TextField nombreTextfield;
+    @FXML private BorderPane bp;
     
     @Override
     public void initialize(URL url, ResourceBundle rb) {
@@ -385,6 +383,11 @@ public class VistaConfiguracionControlador implements Initializable {
         this.configuracion = configuracion;
         for(int i=0; i<configuracion.getComponentes().size(); i++)
             configuracion.getComponentes().get(i).formateoCategoria();
+        for(int i=0; i<configuracion.getComponentes().size(); i++){
+            double aux = Double.parseDouble(precioTotal.getText());
+            aux += configuracion.getComponentes().get(i).getPrecio();
+            precioTotal.setText("" + aux);
+        }
         datos = FXCollections.observableArrayList(configuracion.getComponentes());
         tabla.setItems(datos);
     }
@@ -394,7 +397,7 @@ public class VistaConfiguracionControlador implements Initializable {
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
         alert.setTitle("ConfiguradorPC");          
         alert.setHeaderText("    Entregable IPC");
-        alert.setContentText("                      Entregable de IPC.\n                  Hecho por Kevin y Carlos.\n                                    👊 ");
+        alert.setContentText("                      Entregable de IPC.\n                  Hecho por Kevin y Carlos.");
         alert.showAndWait();
     }
 }
