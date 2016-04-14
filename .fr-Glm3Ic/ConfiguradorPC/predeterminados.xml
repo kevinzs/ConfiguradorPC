@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<listPcWrapper>
+    <PC>
+        <componentes>
+            <cantidad>1</cantidad>
+            <categoria>MOTHERBOARD</categoria>
+            <descripcion>gigabyte ga 78lmt usb3 am3 4ddr3 hdmi usb3.0 matx</descripcion>
+            <iva>11.749</iva>
+            <precio>55.95</precio>
+            <stock>7</stock>
+            <total>67.7</total>
+        </componentes>
+        <componentes>
+            <cantidad>2</cantidad>
+            <categoria>CPU</categoria>
+            <descripcion>intel. core i5 4460 3.20ghz 1150 box</descripcion>
+            <iva>37.227</iva>
+            <precio>177.27</precio>
+            <stock>26</stock>
+            <total>428.993</total>
+        </componentes>
+        <componentes>
+            <cantidad>1</cantidad>
+            <categoria>RAM</categoria>
+            <descripcion>kingston 8gb 1600 ddr3 cl10 dimm hyperx furyser</descripcion>
+            <iva>7.15</iva>
+            <precio>34.05</precio>
+            <stock>108</stock>
+            <total>41.2</total>
+        </componentes>
+        <componentes>
+            <cantidad>1</cantidad>
+            <categoria>HDD</categoria>
+            <descripcion>toshiba hdd 3.5 1tb 32mb sata3 7200rpm</descripcion>
+            <iva>8.226</iva>
+            <precio>39.17</precio>
+            <stock>785</stock>
+            <total>47.396</total>
+        </componentes>
+        <componentes>
+            <cantidad>1</cantidad>
+            <categoria>CASE</categoria>
+            <descripcion>unyka uk 6011 matx 500w negra</descripcion>
+            <iva>6.56</iva>
+            <precio>31.24</precio>
+            <stock>103</stock>
+            <total>37.8</total>
+        </componentes>
+        <componentes>
+            <cantidad>1</cantidad>
+            <categoria>GPU</categoria>
+            <descripcion>vga msi n210 md1gd3h lp 1gb gddr3</descripcion>
+            <iva>6.161</iva>
+            <precio>29.34</precio>
+            <stock>60</stock>
+            <total>35.501</total>
+        </componentes>
+        <nombre>HOLI</nombre>
+    </PC>
+</listPcWrapper>
