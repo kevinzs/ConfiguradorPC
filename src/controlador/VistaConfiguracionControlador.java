@@ -47,15 +47,14 @@ import modelo.PC;
 
     BUG: Arreglar error que hace que si pasa de mil euros pega error.
             La causa del error esta en el formateo de los numeros.
-
-    BUG: Al cargar una configuracion no se actualiza la label precioTotal.
-            La causa es que solo se actualiza al añadir un componente.
 */
 
 public class VistaConfiguracionControlador implements Initializable {
 
     private PC configuracion;
     private ListPcWrapper pcList; //Contiene todos los pc's del XML
+    
+    public boolean predeterminado = false;
     
     @FXML private TableView<Componente> tabla;
     @FXML private TableColumn<Componente, String> columnaNombre;
@@ -75,6 +74,9 @@ public class VistaConfiguracionControlador implements Initializable {
     @FXML private MenuItem eliminarMenu;
     @FXML private TextField nombreTextfield;
     @FXML private BorderPane bp;
+    @FXML private Button añadirButton;
+    @FXML private Button guardarButton;
+    @FXML private MenuItem añadirMenu;
     
     @Override
     public void initialize(URL url, ResourceBundle rb) {
@@ -107,10 +109,10 @@ public class VistaConfiguracionControlador implements Initializable {
             @Override
             public void changed(ObservableValue<? extends Boolean> observable, Boolean oldValue, Boolean newValue) {
                 if (tabla.isFocused()) {
-                    borrarButton.setDisable(false);
-                    modificarButton.setDisable(false);
-                    eliminarMenu.setDisable(false);
-                    modificarMenu.setDisable(false);
+                    borrarButton.setDisable(predeterminado);
+                    modificarButton.setDisable(predeterminado);
+                    eliminarMenu.setDisable(predeterminado);
+                    modificarMenu.setDisable(predeterminado);
                 } if(tabla.getItems().isEmpty()) {
                     borrarButton.setDisable(true);
                     modificarButton.setDisable(true);
@@ -399,5 +401,22 @@ public class VistaConfiguracionControlador implements Initializable {
         alert.setHeaderText("    Entregable IPC");
         alert.setContentText("                      Entregable de IPC.\n                  Hecho por Kevin y Carlos.");
         alert.showAndWait();
+    }
+
+    @FXML
+    private void visualizarPresupuesto(ActionEvent event) {
+    }
+    
+    public void desactivarBotones(){
+        añadirButton.setDisable(true);
+        modificarButton.setDisable(false);
+        borrarButton.setDisable(true);
+        guardarButton.setDisable(true);
+        
+        añadirMenu.setDisable(true);
+        modificarMenu.setDisable(true);
+        eliminarMenu.setDisable(true);
+        
+        predeterminado = true;
     }
 }

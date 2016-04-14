@@ -48,6 +48,7 @@ public class VistaPredeterminadosControlador implements Initializable {
     @FXML
     private void aceptarAction(ActionEvent event) {
         controlador.setConfiguracion(listaPC.getPCList().get(choiceBox.getSelectionModel().getSelectedIndex()));
+        controlador.desactivarBotones();
         
         Node nodo = (Node) event.getSource();
         nodo.getScene().getWindow().hide();
