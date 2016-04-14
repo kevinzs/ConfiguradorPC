@@ -84,7 +84,7 @@
                         <Insets right="10.0" />
                      </HBox.margin>
                   </Label>
-                  <TextField fx:id="nombreTextfield" styleClass="textField" stylesheets="@../css/stylesheet.css" />
+                  <TextField fx:id="nombreTextfield" styleClass="textField" />
                </children>
             </HBox>
          </children>

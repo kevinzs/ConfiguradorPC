@@ -50,9 +50,6 @@ import modelo.PC;
 
     BUG: Al cargar una configuracion no se actualiza la label precioTotal.
             La causa es que solo se actualiza al añadir un componente.
-
-    BUG: Al cargar una configuracion no aparece la categoria. En VistaCargarControlador
-    
 */
 
 public class VistaConfiguracionControlador implements Initializable {
@@ -386,6 +383,8 @@ public class VistaConfiguracionControlador implements Initializable {
     
     public void setConfiguracion(PC configuracion){
         this.configuracion = configuracion;
+        for(int i=0; i<configuracion.getComponentes().size(); i++)
+            configuracion.getComponentes().get(i).formateoCategoria();
         datos = FXCollections.observableArrayList(configuracion.getComponentes());
         tabla.setItems(datos);
     }

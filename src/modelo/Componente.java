@@ -18,7 +18,7 @@ public class Componente extends Product{
     private double total;
     
     public Componente() {
-        super("a",1.2,1,Category.RAM);
+        super("",0.0,0,Category.RAM); //Componente Default
     }
     
     public Componente(String descripcion, double precio, int stock, Category categoria, int cantidad) {
