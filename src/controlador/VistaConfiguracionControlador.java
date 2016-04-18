@@ -8,6 +8,7 @@ import java.text.NumberFormat;
 import java.util.Locale;
 import java.util.Optional;
 import java.util.ResourceBundle;
+import javafx.application.Platform;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
 import javafx.collections.FXCollections;
@@ -257,6 +258,7 @@ public class VistaConfiguracionControlador implements Initializable {
 
     @FXML
     private void cerrarConfigurador(ActionEvent event) {
+        Platform.exit();
     }
  
     @FXML

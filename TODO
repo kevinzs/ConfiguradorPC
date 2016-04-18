@@ -8,15 +8,15 @@ Bug:
 
 Implementar:
 
-	Boton cerrar del toolbar -> He intentado y no se como. Si no lo conseguimos quitamos ese boton y au
 	(OPCIONAL) Imprimir (Boton imprimir en visualizador)
 	(OPCIONAL) Keyboard shortcuts
-	Posibilidad de eliminar PCs
+	(OPCIONAL) Posibilidad de eliminar PCs
 
 
 
 
 HECHO:
+	Boton cerrar del toolbar
 	Visualizar presupuesto, que aparezcan los productos del pc en la tabla
 	Aplicar NumberFormat a precio total (¿Es posible?)
 	Cambio condicion isInteger para que compruebe si (cantidad > 0)

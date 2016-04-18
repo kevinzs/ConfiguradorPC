@@ -13,12 +13,15 @@ import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.print.PrinterJob;
+import javafx.scene.Node;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.text.Font;
+import javafx.stage.Stage;
 import modelo.Componente;
 import modelo.PC;
 
@@ -93,11 +96,13 @@ public class VistaPresupuestoControlador implements Initializable {
     private void imprimirButtonClicked(ActionEvent event) {
         /*Stage estageActual = new Stage();
         PrinterJob job = PrinterJob.createPrinterJob();
-        if (job != null && job.showPrintDialog(estageActual.getScene().getWindow()));{
+        if (job != null && job.showPrintDialog(estageActual.getScene().getWindow()));
             boolean success = job.printPage(estageActual);
             if (success)
-                job.endJob();
-        }*/
-        
+                job.endJob();*/
+        /*Node nodo = (Node) event.getSource();
+        PrinterJob printerJob = PrinterJob.createPrinterJob();
+        if(printerJob.printPage(nodo))
+            printerJob.endJob();*/
     }
 }
