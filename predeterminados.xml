@@ -4,57 +4,198 @@
         <componentes>
             <cantidad>1</cantidad>
             <categoria>MOTHERBOARD</categoria>
-            <descripcion>gigabyte ga 78lmt usb3 am3 4ddr3 hdmi usb3.0 matx</descripcion>
-            <iva>11.749</iva>
-            <precio>55.95</precio>
-            <stock>7</stock>
-            <total>67.7</total>
+            <descripcion>msi 990fxa gaming am3+ ddr3 pcx3.0 usb3.1 atx</descripcion>
+            <iva>27.1</iva>
+            <precio>129.17</precio>
+            <stock>2</stock>
+            <total>156.3</total>
+        </componentes>
+        <componentes>
+            <cantidad>1</cantidad>
+            <categoria>CPU</categoria>
+            <descripcion>cpu intel 1151 i7 6700 4x3 4ghz 8mb box hd 530</descripcion>
+            <iva>64.6</iva>
+            <precio>307.69</precio>
+            <stock>4</stock>
+            <total>372.3</total>
         </componentes>
         <componentes>
             <cantidad>2</cantidad>
-            <categoria>CPU</categoria>
-            <descripcion>intel. core i5 4460 3.20ghz 1150 box</descripcion>
-            <iva>37.227</iva>
-            <precio>177.27</precio>
-            <stock>26</stock>
-            <total>428.993</total>
-        </componentes>
-        <componentes>
-            <cantidad>1</cantidad>
             <categoria>RAM</categoria>
-            <descripcion>kingston 8gb 1600 ddr3 cl10 dimm hyperx furyser</descripcion>
-            <iva>7.15</iva>
-            <precio>34.05</precio>
-            <stock>108</stock>
-            <total>41.2</total>
-        </componentes>
-        <componentes>
-            <cantidad>1</cantidad>
-            <categoria>HDD</categoria>
-            <descripcion>toshiba hdd 3.5 1tb 32mb sata3 7200rpm</descripcion>
-            <iva>8.226</iva>
-            <precio>39.17</precio>
-            <stock>785</stock>
-            <total>47.396</total>
-        </componentes>
-        <componentes>
-            <cantidad>1</cantidad>
-            <categoria>CASE</categoria>
-            <descripcion>unyka uk 6011 matx 500w negra</descripcion>
-            <iva>6.56</iva>
-            <precio>31.24</precio>
-            <stock>103</stock>
-            <total>37.8</total>
+            <descripcion>kingston hyper fury ddr4 16gb 2133mhz cl14 kit2</descripcion>
+            <iva>17.9</iva>
+            <precio>85.12</precio>
+            <stock>6</stock>
+            <total>206.0</total>
         </componentes>
         <componentes>
             <cantidad>1</cantidad>
             <categoria>GPU</categoria>
-            <descripcion>vga msi n210 md1gd3h lp 1gb gddr3</descripcion>
-            <iva>6.161</iva>
-            <precio>29.34</precio>
-            <stock>60</stock>
-            <total>35.501</total>
+            <descripcion>gigabyte vga nvidia gtx 970 oc 4gb ddr5</descripcion>
+            <iva>66.6</iva>
+            <precio>317.19</precio>
+            <stock>141</stock>
+            <total>383.8</total>
         </componentes>
-        <nombre>HOLI</nombre>
+        <componentes>
+            <cantidad>1</cantidad>
+            <categoria>HDD_SSD</categoria>
+            <descripcion>samsung ssd 2.5 500gb serie 850 evo</descripcion>
+            <iva>33.4</iva>
+            <precio>159.09</precio>
+            <stock>25</stock>
+            <total>192.5</total>
+        </componentes>
+        <componentes>
+            <cantidad>1</cantidad>
+            <categoria>CASE</categoria>
+            <descripcion>aerocool caja semitorre v3x advance black usb3.0</descripcion>
+            <iva>6.6</iva>
+            <precio>31.49</precio>
+            <stock>12</stock>
+            <total>38.1</total>
+        </componentes>
+        <nombre>Para gamers</nombre>
+    </PC>
+    <PC>
+        <componentes>
+            <cantidad>1</cantidad>
+            <categoria>MOTHERBOARD</categoria>
+            <descripcion>msi placa base 970a g43 atx am3</descripcion>
+            <iva>12.6</iva>
+            <precio>60.08</precio>
+            <stock>149</stock>
+            <total>72.7</total>
+        </componentes>
+        <componentes>
+            <cantidad>1</cantidad>
+            <categoria>CPU</categoria>
+            <descripcion>intel core i3.4130 3.4ghz s1150 3mb</descripcion>
+            <iva>21.5</iva>
+            <precio>102.56</precio>
+            <stock>2</stock>
+            <total>124.1</total>
+        </componentes>
+        <componentes>
+            <cantidad>1</cantidad>
+            <categoria>RAM</categoria>
+            <descripcion>modulo ddr3 2gb pc1333 kingston retail</descripcion>
+            <iva>2.7</iva>
+            <precio>12.81</precio>
+            <stock>11</stock>
+            <total>15.5</total>
+        </componentes>
+        <componentes>
+            <cantidad>1</cantidad>
+            <categoria>GPU</categoria>
+            <descripcion>gigabyte  vga nvidia gt 210 1gb ddr3</descripcion>
+            <iva>6.5</iva>
+            <precio>31.07</precio>
+            <stock>74</stock>
+            <total>37.6</total>
+        </componentes>
+        <componentes>
+            <cantidad>1</cantidad>
+            <categoria>HDD</categoria>
+            <descripcion>toshiba hdd 500gb 32mb 7200rpm sata3</descripcion>
+            <iva>7.8</iva>
+            <precio>37.27</precio>
+            <stock>41</stock>
+            <total>45.1</total>
+        </componentes>
+        <componentes>
+            <cantidad>1</cantidad>
+            <categoria>CASE</categoria>
+            <descripcion>unyka caja micro atx 400w uk2007b negra</descripcion>
+            <iva>6.0</iva>
+            <precio>28.6</precio>
+            <stock>13</stock>
+            <total>34.6</total>
+        </componentes>
+        <componentes>
+            <cantidad>1</cantidad>
+            <categoria>MOUSE</categoria>
+            <descripcion>skullkiller gaming gmi 2400dpi peso configurable</descripcion>
+            <iva>2.1</iva>
+            <precio>10.17</precio>
+            <stock>19</stock>
+            <total>12.3</total>
+        </componentes>
+        <componentes>
+            <cantidad>1</cantidad>
+            <categoria>POWER_SUPPLY</categoria>
+            <descripcion>tooq fuente alimentacion tqep 700sp 700w</descripcion>
+            <iva>6.9</iva>
+            <precio>32.98</precio>
+            <stock>90</stock>
+            <total>39.9</total>
+        </componentes>
+        <nombre>Ahorradores</nombre>
+    </PC>
+    <PC>
+        <componentes>
+            <cantidad>1</cantidad>
+            <categoria>MOTHERBOARD</categoria>
+            <descripcion>msi placa base a68hm grenade usb3.0 matx fm2</descripcion>
+            <iva>10.1</iva>
+            <precio>48.1</precio>
+            <stock>32</stock>
+            <total>58.2</total>
+        </componentes>
+        <componentes>
+            <cantidad>1</cantidad>
+            <categoria>CPU</categoria>
+            <descripcion>intel core i5.6400 lga1151 3.30ghz 6mb box</descripcion>
+            <iva>37.2</iva>
+            <precio>177.11</precio>
+            <stock>11</stock>
+            <total>214.3</total>
+        </componentes>
+        <componentes>
+            <cantidad>1</cantidad>
+            <categoria>RAM</categoria>
+            <descripcion>modulo ddr4 4gb pc2133 kingston hyperx fury black</descripcion>
+            <iva>5.2</iva>
+            <precio>24.71</precio>
+            <stock>20</stock>
+            <total>29.9</total>
+        </componentes>
+        <componentes>
+            <cantidad>1</cantidad>
+            <categoria>SCREEN</categoria>
+            <descripcion>benq. gw2760hs 27pulg. led va full hd dvi 4ms</descripcion>
+            <iva>35.8</iva>
+            <precio>170.33</precio>
+            <stock>16</stock>
+            <total>206.1</total>
+        </componentes>
+        <componentes>
+            <cantidad>1</cantidad>
+            <categoria>HDD</categoria>
+            <descripcion>w.d. hdd 3tb 64mb sata3 6gbps caviar green</descripcion>
+            <iva>18.4</iva>
+            <precio>87.85</precio>
+            <stock>3</stock>
+            <total>106.3</total>
+        </componentes>
+        <componentes>
+            <cantidad>1</cantidad>
+            <categoria>GPU</categoria>
+            <descripcion>gigabyte n730d5.2gi gt730 2gb gddr5 hdmi dx11.1</descripcion>
+            <iva>12.9</iva>
+            <precio>61.65</precio>
+            <stock>5</stock>
+            <total>74.6</total>
+        </componentes>
+        <componentes>
+            <cantidad>1</cantidad>
+            <categoria>CASE</categoria>
+            <descripcion>caja torre talius drakko blanca tal drakkow</descripcion>
+            <iva>7.9</iva>
+            <precio>37.52</precio>
+            <stock>9</stock>
+            <total>45.4</total>
+        </componentes>
+        <nombre>Mi PC ideal</nombre>
     </PC>
 </listPcWrapper>

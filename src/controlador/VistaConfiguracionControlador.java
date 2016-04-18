@@ -16,6 +16,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Node;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Alert.AlertType;
@@ -257,9 +258,8 @@ public class VistaConfiguracionControlador implements Initializable {
 
     @FXML
     private void cerrarConfigurador(ActionEvent event) {
-        // A COMPLETAR
     }
-
+ 
     @FXML
     private void añadirComponenteMenu(ActionEvent event) {
         try {
@@ -326,7 +326,6 @@ public class VistaConfiguracionControlador implements Initializable {
                 Alert alert = new Alert(AlertType.CONFIRMATION);
                 alert.setTitle("Diálogo de confirmación");
                 alert.setHeaderText("Guardado con éxito.");
-                alert.setContentText("¿Quiéres imprimir la configuración?");
                 Optional<ButtonType> result = alert.showAndWait();
             }
         } else {
@@ -392,6 +391,22 @@ public class VistaConfiguracionControlador implements Initializable {
 
     @FXML
     private void visualizarPresupuesto(ActionEvent event) {
+        try {
+            Stage estageActual = new Stage();
+            estageActual.setTitle("Presupuesto");
+            
+            FXMLLoader miCargador = new FXMLLoader(getClass().getResource("/vista/VistaPresupuesto.fxml"));
+            BorderPane root = (BorderPane) miCargador.load();
+            
+            ((VistaPresupuestoControlador) miCargador.getController()).setConfiguracion(configuracion);
+            
+            Scene scene = new Scene(root);
+            estageActual.setScene(scene);
+            estageActual.initModality(Modality.NONE);
+            estageActual.show();
+        } catch(IOException e){
+            e.printStackTrace();
+        }
     }
     
     public void desactivarBotones(){

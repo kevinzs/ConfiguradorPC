@@ -1,27 +1,20 @@
-Cambiar:
-	
-	Aplicar NumberFormat a campos de tabla (¿Es posible?)
 
 Bug:
-
-	Ventana modificar peta con nueva cantidad grande. 
-		- Causa: Formateo de los numeros.
 	Si haces grande las ventanas las tablas tienen 1 columna extra.
 		- Causa: si se fija que se expandan las columnas con la ventana algunas columnas se quedan demasiado grandes
 				para la informacion que muestran. Si sabes como solucionar eso.
-	Arreglar error que hace que si pasa de mil euros pega error. 
-		- Causa: formateo del precio total y el iva de un componente.
+
+				--> Yo diria que no importa que se queden demasiado grandes, si el usuario la quieres asi... Mejor que tener una columna de mas
 
 Implementar:
 
-	Visualizar presupuesto
-	Si abres una configuracion, poder imprimir sin guardar otra vez
-	Boton cerrar del toolbar
-	(OPCIONAL) Imprimir
+	Visualizar presupuesto, que aparezcan los productos del pc en la tabla
+	Boton cerrar del toolbar -> He intentado y no se como. Si no lo conseguimos quitamos ese boton y au
+	(OPCIONAL) Imprimir (Boton imprimir en visualizador)
 	(OPCIONAL) Keyboard shortcuts
+	Posibilidad de eliminar PCs
 
-Crear lista de PCs preconfigurados
-Borrar PCs preconfigurados de prueba ("HOLI", "pene", etc..)
+
 
 
 HECHO:
@@ -29,3 +22,6 @@ HECHO:
 	Aplicar NumberFormat a precio total (¿Es posible?)
 	Cambio condicion isInteger para que compruebe si (cantidad > 0)
 	Al limpiar la busqueda que guarde la categoria
+	Fecha actual, labels de visualizar presupuesto
+	Crear lista de PCs preconfigurados
+	Borrar PCs preconfigurados de prueba ("HOLI", "pene", etc..)
