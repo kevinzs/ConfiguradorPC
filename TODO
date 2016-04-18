@@ -1,0 +1,27 @@
+Cambiar:
+	
+	Aplicar NumberFormat a campos de tabla (¿Es posible?)
+
+Bug:
+
+	Ventana modificar peta con nueva cantidad grande. Por algo del formateo
+	Si haces grande las ventanas las tablas tienen 1 columna extra	
+	Arreglar error que hace que si pasa de mil euros pega error. La causa del error esta en el formateo de los numeros.
+
+Implementar:
+
+	Visualizar presupuesto
+	Si abres una configuracion, poder imprimir sin guardar otra vez
+	Boton cerrar del toolbar
+	(OPCIONAL) Imprimir
+	(OPCIONAL) Keyboard shortcuts
+
+Crear lista de PCs preconfigurados
+Borrar PCs preconfigurados de prueba ("HOLI", "pene", etc..)
+
+
+HECHO:
+
+	Aplicar NumberFormat a precio total (¿Es posible?)
+	Cambio condicion isInteger para que compruebe si (cantidad > 0)
+	Al limpiar la busqueda que guarde la categoria

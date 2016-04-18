@@ -1,10 +1,9 @@
-
+ 
 package controlador;
 
 import java.io.File;
 import java.io.IOException;
 import java.net.URL;
-import java.text.DecimalFormat;
 import java.text.NumberFormat;
 import java.util.Locale;
 import java.util.Optional;
@@ -40,14 +39,6 @@ import modelo.Componente;
 import modelo.ListPcWrapper;
 import modelo.PC;
 
-/*  Cosas para hacer:
-        - Dar la posibilidad de imprimir la configuracion.
-        - Poner un tamaño minimo fijo a cada ventana para que no se puedan
-            hacer mas pequeñas de ese tamaño.
-
-    BUG: Arreglar error que hace que si pasa de mil euros pega error.
-            La causa del error esta en el formateo de los numeros.
-*/
 
 public class VistaConfiguracionControlador implements Initializable {
 
@@ -78,6 +69,9 @@ public class VistaConfiguracionControlador implements Initializable {
     @FXML private Button guardarButton;
     @FXML private MenuItem añadirMenu;
     
+    NumberFormat currencyFormatter = NumberFormat.getCurrencyInstance(Locale.getDefault()); 
+    double doublePrecioTotal;
+    
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         bp.setMinSize(925, 500);
@@ -85,7 +79,8 @@ public class VistaConfiguracionControlador implements Initializable {
         pcList = new ListPcWrapper();
         actualizarPcList();
         
-        precioTotal.setText("" + 0);
+        double doublePrecioTotal = 0;
+        precioTotal.setText(currencyFormatter.format(doublePrecioTotal));
         
         columnaNombre.setCellValueFactory(new PropertyValueFactory<>("descripcion"));
         columnaCategoria.setCellValueFactory(new PropertyValueFactory<>("cat"));
@@ -147,19 +142,17 @@ public class VistaConfiguracionControlador implements Initializable {
         configuracion.añadirComponente(componente);
         datos = FXCollections.observableArrayList(configuracion.getComponentes());
         tabla.setItems(datos);
-        
-        NumberFormat nf = NumberFormat.getNumberInstance(Locale.US);
-        DecimalFormat formateador = (DecimalFormat) nf;
-        double aux = Double.parseDouble(precioTotal.getText());
-        aux += componente.getTotal();
-        aux = Double.parseDouble(formateador.format(aux));
-        precioTotal.setText("" + aux);
+      
+        doublePrecioTotal += componente.getTotal();
+        precioTotal.setText(currencyFormatter.format(doublePrecioTotal));
     }
     
     public void modificarComponente(Componente antiguo, Componente nuevo){
         configuracion.getComponentes().set(configuracion.getComponentes().indexOf(antiguo), nuevo);
         datos = FXCollections.observableArrayList(configuracion.getComponentes());
         tabla.setItems(datos);
+        doublePrecioTotal += nuevo.getTotal();
+        precioTotal.setText(currencyFormatter.format(doublePrecioTotal));
     }
 
     @FXML
@@ -187,13 +180,8 @@ public class VistaConfiguracionControlador implements Initializable {
     private void borrarAccion(ActionEvent event) {
         int i = tabla.getSelectionModel().getSelectedIndex();
     	if (i>=0){
-            NumberFormat nf = NumberFormat.getNumberInstance(Locale.US);
-            DecimalFormat formateador = (DecimalFormat) nf;
-            double aux = Double.parseDouble(precioTotal.getText());
-            aux -= tabla.getSelectionModel().getSelectedItem().getTotal();
-            aux = Double.parseDouble(formateador.format(aux));
-            precioTotal.setText("" + aux);
-            
+            doublePrecioTotal -= tabla.getSelectionModel().getSelectedItem().getTotal();
+            precioTotal.setText(currencyFormatter.format(Math.abs(doublePrecioTotal)));
             configuracion.eliminarComponente(tabla.getSelectionModel().getSelectedItem());
             datos.remove(i);
         }
@@ -269,7 +257,7 @@ public class VistaConfiguracionControlador implements Initializable {
 
     @FXML
     private void cerrarConfigurador(ActionEvent event) {
-        // Que se cierre la ventana
+        // A COMPLETAR
     }
 
     @FXML
@@ -300,17 +288,16 @@ public class VistaConfiguracionControlador implements Initializable {
     private void eliminarComponenteMenu(ActionEvent event) {
         int i = tabla.getSelectionModel().getSelectedIndex();
     	if (i>=0){
-            NumberFormat nf = NumberFormat.getNumberInstance(Locale.US);
-            DecimalFormat formateador = (DecimalFormat) nf;
-            double aux = Double.parseDouble(precioTotal.getText());
-            aux -= tabla.getSelectionModel().getSelectedItem().getTotal();
-            aux = Double.parseDouble(formateador.format(aux));
-            precioTotal.setText("" + aux);
+
+            doublePrecioTotal -= tabla.getSelectionModel().getSelectedItem().getTotal();
+            precioTotal.setText(currencyFormatter.format(doublePrecioTotal));
             
             configuracion.eliminarComponente(tabla.getSelectionModel().getSelectedItem());
             datos.remove(i);
         }
         if(tabla.getItems().isEmpty()) {
+            double doublePrecioTotal = 0;
+            precioTotal.setText(currencyFormatter.format(doublePrecioTotal));
             borrarButton.setDisable(true);
             modificarButton.setDisable(true);
         }
@@ -383,13 +370,13 @@ public class VistaConfiguracionControlador implements Initializable {
     
     public void setConfiguracion(PC configuracion){
         this.configuracion = configuracion;
+        doublePrecioTotal = 0;
         for(int i=0; i<configuracion.getComponentes().size(); i++)
             configuracion.getComponentes().get(i).formateoCategoria();
         for(int i=0; i<configuracion.getComponentes().size(); i++){
-            double aux = Double.parseDouble(precioTotal.getText());
-            aux += configuracion.getComponentes().get(i).getPrecio();
-            precioTotal.setText("" + aux);
+            doublePrecioTotal += configuracion.getComponentes().get(i).getTotal();
         }
+        precioTotal.setText(currencyFormatter.format(doublePrecioTotal));
         datos = FXCollections.observableArrayList(configuracion.getComponentes());
         tabla.setItems(datos);
     }

@@ -49,7 +49,7 @@ public class AñadirComponenteControlador implements Initializable {
     
     private VistaConfiguracionControlador controlador;
     
-    private Category categoria;
+    public Category categoria = Category.MOTHERBOARD;
     
     @FXML private TextField cantidadTextfield;
     @FXML private TextField nombreTextField;
@@ -74,15 +74,13 @@ public class AñadirComponenteControlador implements Initializable {
         columnaPrecio.setStyle( "-fx-alignment: CENTER;");
         columnaDisponibilidad.setStyle( "-fx-alignment: CENTER;");
         
-        categoria = Category.MOTHERBOARD;
-        
-        choiceBox.setValue("Placa base");
+        choiceBox.setValue(formateoCategoriaString(categoria));
         choiceBox.setItems(componentesList);
         
         // Actualiza la tabla si seleccionamos una opcion diferende de la choiceBox
         choiceBox.valueProperty().addListener(new ChangeListener(){
            @Override
-           public void changed(ObservableValue o, Object oldVal, Object newVal){
+            public void changed(ObservableValue o, Object oldVal, Object newVal){
                int position = choiceBox.getSelectionModel().getSelectedIndex();
                switch(position){
                     case 0:
@@ -151,9 +149,9 @@ public class AñadirComponenteControlador implements Initializable {
                }
                datos = FXCollections.observableArrayList(componentesTabla);
                tabla.setItems(datos);
-           }
+            }
         });
-        componentesTabla = Database.getProductByCategory(Product.Category.MOTHERBOARD);
+        componentesTabla = Database.getProductByCategory(categoria);
         datos = FXCollections.observableArrayList(componentesTabla);
         tabla.setItems(datos);
     }
@@ -163,7 +161,7 @@ public class AñadirComponenteControlador implements Initializable {
         Product seleccion = tabla.getSelectionModel().getSelectedItem();
         int cantidad = 1;
         boolean flag = true;
-        if (isInteger(cantidadTextfield.getText())){
+        if (isPositiveInteger(cantidadTextfield.getText())){
             cantidad = Integer.parseInt(cantidadTextfield.getText());
             if(cantidad > seleccion.getStock()) {
                 alerta("No hay tantas unidades disponibles del componente seleccionado.");
@@ -191,7 +189,7 @@ public class AñadirComponenteControlador implements Initializable {
                 && (!precioMin.getText().trim().isEmpty()
                 || !precioMax.getText().trim().isEmpty())){
             // comprobamos que los precios estan bien
-            if(isInteger(precioMin.getText()) && isInteger(precioMax.getText())) {
+            if(isPositiveInteger(precioMin.getText()) && isPositiveInteger(precioMax.getText())) {
                 /* Busca los componentes los cuales coinciden con el nombre y el
                     rango de precio indicados en las opciones adicionales y los
                     muestra en la tabla */
@@ -199,12 +197,12 @@ public class AñadirComponenteControlador implements Initializable {
                         nombreTextField.getText().trim(),
                         Double.parseDouble(precioMin.getText()), 
                         Double.parseDouble(precioMax.getText()), stockCheckBox.isSelected());
-            } else if (isInteger(precioMin.getText()) && precioMax.getText().isEmpty()) {
+            } else if (isPositiveInteger(precioMin.getText()) && precioMax.getText().isEmpty()) {
                 componentesTabla = Database.getProductByCategoryDescriptionAndPrice(categoria,
                         nombreTextField.getText().trim(),
                         Double.parseDouble(precioMin.getText()), 
                         99999999, stockCheckBox.isSelected());
-            } else if (precioMin.getText().isEmpty() && isInteger(precioMax.getText())) {
+            } else if (precioMin.getText().isEmpty() && isPositiveInteger(precioMax.getText())) {
                 componentesTabla = Database.getProductByCategoryDescriptionAndPrice(categoria,
                         nombreTextField.getText().trim(),0, 
                         Double.parseDouble(precioMax.getText()), stockCheckBox.isSelected());
@@ -213,17 +211,17 @@ public class AñadirComponenteControlador implements Initializable {
             datos = FXCollections.observableArrayList(componentesTabla);
             tabla.setItems(datos);
         } else if(!precioMin.getText().trim().isEmpty() || !precioMax.getText().trim().isEmpty()) {           
-            if(isInteger(precioMin.getText()) && isInteger(precioMax.getText())) {
+            if(isPositiveInteger(precioMin.getText()) && isPositiveInteger(precioMax.getText())) {
                 /* Busca los componentes que estan dentro del rango especificado en las
                     opciones adicionales de busqueda y los muestra en la tabla */
                 componentesTabla = Database.getProductByCategoryAndPrice(categoria,
                         Double.parseDouble(precioMin.getText()), 
                         Double.parseDouble(precioMax.getText()), stockCheckBox.isSelected());
-            } else if (isInteger(precioMin.getText()) && precioMax.getText().isEmpty()) {
+            } else if (isPositiveInteger(precioMin.getText()) && precioMax.getText().isEmpty()) {
                 componentesTabla = Database.getProductByCategoryAndPrice(categoria,
                         Double.parseDouble(precioMin.getText()), 
                         99999999, stockCheckBox.isSelected());
-            } else if (precioMin.getText().isEmpty() && isInteger(precioMax.getText())) {
+            } else if (precioMin.getText().isEmpty() && isPositiveInteger(precioMax.getText())) {
                 componentesTabla = Database.getProductByCategoryAndPrice(categoria,0, 
                         Double.parseDouble(precioMax.getText()), stockCheckBox.isSelected());
             } else 
@@ -268,16 +266,54 @@ public class AñadirComponenteControlador implements Initializable {
     }
     
     /**
-     * Metodo para comprobar si un String es un numero o no
+     * Metodo para comprobar si un String es un numero o no y si es mayor que 0
      * @param s String a comprobar
-     * @return true si es numero, false si es otra cosa
+     * @return true si es numero>0, false si es otra cosa
      */
-    public static boolean isInteger(String s) {
+    public static boolean isPositiveInteger(String s) {
+        int x;
         try { 
-            Integer.parseInt(s); 
+            x = Integer.parseInt(s); 
         } catch(NumberFormatException | NullPointerException e) { 
             return false; 
         }
-        return true;
+        return (x>0);
     }
+    
+     public String formateoCategoriaString(Category categoria){
+        if(categoria == Category.CASE)
+            return "Torre";
+        else if(categoria == Category.CPU)
+            return "Procesador";
+        else if(categoria == Category.DVD_WRITER)
+            return "Grabadora";
+        else if(categoria == Category.FAN)
+            return "Ventilador";
+        else if(categoria == Category.GPU)
+            return "Tarjeta gráfica";
+        else if(categoria == Category.HDD)
+            return "Disco Duro";
+        else if(categoria == Category.HDD_SSD)
+            return "Disco Duro SSD";
+        else if(categoria == Category.KEYBOARD)
+            return "Teclado";
+        else if(categoria == Category.MOTHERBOARD)
+            return "Placa base";
+        else if(categoria == Category.MOUSE)
+            return "Ratón";
+        else if(categoria == Category.MULTIREADER)
+            return "Multilector";
+        else if(categoria == Category.POWER_SUPPLY)
+            return "Fuente de alimentación";
+        else if(categoria == Category.RAM)
+            return "Memoria RAM";
+        else if(categoria == Category.SCREEN)
+            return "Pantalla";
+        else if(categoria == Category.SPEAKER)
+            return "Altavoz";
+        else
+            return "Categoria erronea.";
+    }
+    
+    
 }

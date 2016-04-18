@@ -24,7 +24,7 @@ public class VistaModificarControlador implements Initializable {
 
     @FXML
     private void aceptarAction(ActionEvent event) {
-        if(!cantidad.getText().isEmpty() && isInteger(cantidad.getText())){
+        if(!cantidad.getText().isEmpty() && isPositiveInteger(cantidad.getText())){
             controlador.modificarComponente(componente, new Componente(componente.getDescripcion(),
                 componente.getPrecio(), componente.getStock(), componente.getCategoria(),
                 Integer.parseInt(cantidad.getText())));
@@ -58,12 +58,13 @@ public class VistaModificarControlador implements Initializable {
         alert.showAndWait();
     }
    
-    public static boolean isInteger(String s) {
+    public static boolean isPositiveInteger(String s) {
+        int x;
         try { 
-            Integer.parseInt(s); 
+            x = Integer.parseInt(s); 
         } catch(NumberFormatException | NullPointerException e) { 
             return false; 
         }
-        return true;
+        return (x>0);
     }
 }
