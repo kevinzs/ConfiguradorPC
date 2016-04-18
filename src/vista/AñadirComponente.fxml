@@ -14,132 +14,132 @@
 <?import javafx.scene.layout.VBox?>
 
 <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="525.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controlador.AñadirComponenteControlador">
-   <center>
-      <TableView fx:id="tabla" editable="true" prefHeight="303.0" prefWidth="680.0" BorderPane.alignment="CENTER">
-        <columns>
-          <TableColumn fx:id="columnaNombre" prefWidth="417.0" text="Nombre" />
-          <TableColumn fx:id="columnaPrecio" prefWidth="117.0" text="Precio" />
-            <TableColumn fx:id="columnaDisponibilidad" prefWidth="137.0" text="Disponibilidad" />
-        </columns>
-         <BorderPane.margin>
-            <Insets left="10.0" right="10.0" />
-         </BorderPane.margin>
-      </TableView>
-   </center>
-   <bottom>
-      <HBox alignment="CENTER" prefHeight="49.0" prefWidth="700.0" BorderPane.alignment="CENTER">
-         <children>
-            <Button fx:id="añadirButton" mnemonicParsing="false" onAction="#añadirComponente" prefWidth="80.0" text="Añadir">
-               <HBox.margin>
-                  <Insets right="10.0" />
-               </HBox.margin>
-            </Button>
-            <Button mnemonicParsing="false" onAction="#cancelarAccion" prefWidth="80.0" text="Cancelar" />
-         </children>
-      </HBox>
-   </bottom>
-   <top>
-      <HBox alignment="CENTER" prefHeight="144.0" prefWidth="700.0" BorderPane.alignment="CENTER">
-         <children>
-            <VBox prefHeight="100.0" prefWidth="246.0">
-               <children>
-                  <HBox prefHeight="53.0" prefWidth="246.0">
-                     <children>
-                        <Label text="Categoria:">
-                           <HBox.margin>
-                              <Insets right="10.0" top="50.0" />
-                           </HBox.margin>
-                        </Label>
-                        <ChoiceBox fx:id="choiceBox" prefWidth="150.0">
-                           <HBox.margin>
-                              <Insets top="45.0" />
-                           </HBox.margin>
-                        </ChoiceBox>
-                     </children>
-                  </HBox>
-                  <HBox prefHeight="39.0" prefWidth="246.0">
-                     <children>
-                        <Label text="Cantidad:">
-                           <HBox.margin>
-                              <Insets right="15.0" top="15.0" />
-                           </HBox.margin>
-                        </Label>
-                        <TextField fx:id="cantidadTextfield" alignment="CENTER" prefHeight="26.0" prefWidth="60.0">
-                           <HBox.margin>
-                              <Insets top="10.0" />
-                           </HBox.margin>
-                        </TextField>
-                     </children>
-                  </HBox>
-               </children>
-            </VBox>
-            <Separator orientation="VERTICAL" prefHeight="200.0">
-               <HBox.margin>
-                  <Insets bottom="10.0" top="10.0" />
-               </HBox.margin>
-            </Separator>
-            <VBox prefHeight="144.0" prefWidth="320.0">
-               <children>
-                  <Label prefHeight="16.0" prefWidth="236.0" text="Opciones de busqueda adicionales:">
-                     <VBox.margin>
-                        <Insets left="10.0" top="10.0" />
-                     </VBox.margin>
-                  </Label>
-                  <HBox prefHeight="48.0" prefWidth="320.0">
-                     <children>
-                        <Label text="Nombre:">
-                           <HBox.margin>
-                              <Insets left="10.0" right="10.0" top="15.0" />
-                           </HBox.margin>
-                        </Label>
-                        <TextField fx:id="nombreTextField" prefHeight="26.0" prefWidth="198.0">
-                           <HBox.margin>
-                              <Insets top="10.0" />
-                           </HBox.margin>
-                        </TextField>
-                     </children>
-                  </HBox>
-                  <HBox prefHeight="41.0" prefWidth="320.0">
-                     <children>
-                        <Label text="Rango de precio:">
-                           <HBox.margin>
-                              <Insets left="10.0" right="10.0" top="5.0" />
-                           </HBox.margin>
-                        </Label>
-                        <TextField fx:id="precioMin" alignment="CENTER" prefHeight="26.0" prefWidth="60.0">
-                           <HBox.margin>
-                              <Insets right="5.0" />
-                           </HBox.margin>
-                        </TextField>
-                        <Label layoutX="10.0" layoutY="10.0" text="-">
-                           <HBox.margin>
-                              <Insets top="5.0" />
-                           </HBox.margin>
-                        </Label>
-                        <TextField fx:id="precioMax" alignment="CENTER" layoutX="121.0" layoutY="10.0" prefHeight="26.0" prefWidth="60.0">
-                           <HBox.margin>
-                              <Insets left="5.0" />
-                           </HBox.margin>
-                        </TextField>
-                     </children>
-                  </HBox>
-                  <HBox prefHeight="38.0" prefWidth="320.0">
-                     <children>
-                        <CheckBox fx:id="stockCheckBox" mnemonicParsing="false" text="Disponibilidad">
-                           <HBox.margin>
-                              <Insets left="10.0" top="5.0" />
-                           </HBox.margin>
-                        </CheckBox>
-                        <Button fx:id="buscarButton" mnemonicParsing="false" onAction="#busquedaAdicional" text="Buscar">
-                           <HBox.margin>
-                              <Insets left="50.0" />
-                           </HBox.margin>
-                        </Button>
-                     </children>
-                  </HBox>
-               </children>
-            </VBox>
-         </children>
-      </HBox>
-   </top>
+  <bottom>
+    <HBox alignment="CENTER" prefHeight="49.0" prefWidth="700.0" BorderPane.alignment="CENTER">
+      <children>
+        <Button fx:id="añadirButton" mnemonicParsing="false" onAction="#añadirComponente" prefWidth="80.0" text="Añadir">
+          <HBox.margin>
+            <Insets right="10.0" />
+          </HBox.margin>
+        </Button>
+        <Button mnemonicParsing="false" onAction="#cancelarAccion" prefWidth="80.0" text="Cancelar" />
+      </children>
+    </HBox>
+  </bottom>
+  <center>
+    <TableView fx:id="tabla" editable="true" maxWidth="670.0" prefHeight="303.0" prefWidth="670.0" BorderPane.alignment="CENTER">
+      <columns>
+        <TableColumn fx:id="columnaNombre" maxWidth="417.0" prefWidth="391.0" resizable="false" text="Nombre" />
+        <TableColumn fx:id="columnaPrecio" maxWidth="160.0" prefWidth="133.0" resizable="false" text="Precio" />
+        <TableColumn fx:id="columnaDisponibilidad" maxWidth="143.0" prefWidth="129.0" resizable="false" text="Disponibilidad" />
+      </columns>
+      <BorderPane.margin>
+        <Insets left="10.0" right="10.0" />
+      </BorderPane.margin>
+    </TableView>
+  </center>
+  <top>
+    <HBox alignment="CENTER" prefHeight="144.0" prefWidth="700.0" BorderPane.alignment="CENTER">
+      <children>
+        <VBox prefHeight="100.0" prefWidth="246.0">
+          <children>
+            <HBox prefHeight="53.0" prefWidth="246.0">
+              <children>
+                <Label text="Categoria:">
+                  <HBox.margin>
+                    <Insets right="10.0" top="50.0" />
+                  </HBox.margin>
+                </Label>
+                <ChoiceBox fx:id="choiceBox" prefWidth="150.0">
+                  <HBox.margin>
+                    <Insets top="45.0" />
+                  </HBox.margin>
+                </ChoiceBox>
+              </children>
+            </HBox>
+            <HBox prefHeight="39.0" prefWidth="246.0">
+              <children>
+                <Label text="Cantidad:">
+                  <HBox.margin>
+                    <Insets right="15.0" top="15.0" />
+                  </HBox.margin>
+                </Label>
+                <TextField fx:id="cantidadTextfield" alignment="CENTER" prefHeight="26.0" prefWidth="60.0">
+                  <HBox.margin>
+                    <Insets top="10.0" />
+                  </HBox.margin>
+                </TextField>
+              </children>
+            </HBox>
+          </children>
+        </VBox>
+        <Separator orientation="VERTICAL" prefHeight="200.0">
+          <HBox.margin>
+            <Insets bottom="10.0" top="10.0" />
+          </HBox.margin>
+        </Separator>
+        <VBox prefHeight="144.0" prefWidth="320.0">
+          <children>
+            <Label prefHeight="16.0" prefWidth="236.0" text="Opciones de busqueda adicionales:">
+              <VBox.margin>
+                <Insets left="10.0" top="10.0" />
+              </VBox.margin>
+            </Label>
+            <HBox prefHeight="48.0" prefWidth="320.0">
+              <children>
+                <Label text="Nombre:">
+                  <HBox.margin>
+                    <Insets left="10.0" right="10.0" top="15.0" />
+                  </HBox.margin>
+                </Label>
+                <TextField fx:id="nombreTextField" prefHeight="26.0" prefWidth="198.0">
+                  <HBox.margin>
+                    <Insets top="10.0" />
+                  </HBox.margin>
+                </TextField>
+              </children>
+            </HBox>
+            <HBox prefHeight="41.0" prefWidth="320.0">
+              <children>
+                <Label text="Rango de precio:">
+                  <HBox.margin>
+                    <Insets left="10.0" right="10.0" top="5.0" />
+                  </HBox.margin>
+                </Label>
+                <TextField fx:id="precioMin" alignment="CENTER" prefHeight="26.0" prefWidth="60.0">
+                  <HBox.margin>
+                    <Insets right="5.0" />
+                  </HBox.margin>
+                </TextField>
+                <Label text="-">
+                  <HBox.margin>
+                    <Insets top="5.0" />
+                  </HBox.margin>
+                </Label>
+                <TextField fx:id="precioMax" alignment="CENTER" prefHeight="26.0" prefWidth="60.0">
+                  <HBox.margin>
+                    <Insets left="5.0" />
+                  </HBox.margin>
+                </TextField>
+              </children>
+            </HBox>
+            <HBox prefHeight="38.0" prefWidth="320.0">
+              <children>
+                <CheckBox fx:id="stockCheckBox" mnemonicParsing="false" text="Disponibilidad">
+                  <HBox.margin>
+                    <Insets left="10.0" top="5.0" />
+                  </HBox.margin>
+                </CheckBox>
+                <Button fx:id="buscarButton" mnemonicParsing="false" onAction="#busquedaAdicional" text="Buscar">
+                  <HBox.margin>
+                    <Insets left="50.0" />
+                  </HBox.margin>
+                </Button>
+              </children>
+            </HBox>
+          </children>
+        </VBox>
+      </children>
+    </HBox>
+  </top>
 </BorderPane>

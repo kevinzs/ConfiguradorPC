@@ -17,7 +17,6 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
-import javafx.scene.Node;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Alert.AlertType;
@@ -131,10 +130,12 @@ public class VistaConfiguracionControlador implements Initializable {
             
             ((AñadirComponenteControlador) miCargador.getController()).setControlador(this);
             
-            Scene scene = new Scene(root);
+            Scene scene = new Scene(root, 725, 550);
             estageActual.setScene(scene);
             estageActual.initModality(Modality.NONE);
             estageActual.show();
+            estageActual.setMinWidth(estageActual.getWidth());
+            estageActual.setMinHeight(estageActual.getHeight());
         } catch(IOException e){
             e.printStackTrace();
         }
@@ -169,10 +170,12 @@ public class VistaConfiguracionControlador implements Initializable {
             ((VistaModificarControlador) miCargador.getController()).setControlador(this);
             ((VistaModificarControlador) miCargador.getController()).setComponente(tabla.getSelectionModel().getSelectedItem());
             
-            Scene scene = new Scene(root);
+            Scene scene = new Scene(root,305,143);
             estageActual.setScene(scene);
             estageActual.initModality(Modality.NONE);
             estageActual.show();
+            estageActual.setMinWidth(estageActual.getWidth());
+            estageActual.setMinHeight(estageActual.getHeight());
         } catch(IOException e){
             e.printStackTrace();
         }
@@ -228,10 +231,12 @@ public class VistaConfiguracionControlador implements Initializable {
             
             ((VistaCargarControlador) miCargador.getController()).setControlador(this);
             
-            Scene scene = new Scene(root);
+            Scene scene = new Scene(root,305,143);
             estageActual.setScene(scene);
             estageActual.initModality(Modality.NONE);
             estageActual.show();
+            estageActual.setMinWidth(estageActual.getWidth());
+            estageActual.setMinHeight(estageActual.getHeight());
         } catch(IOException e){
             e.printStackTrace();
         }
@@ -248,10 +253,12 @@ public class VistaConfiguracionControlador implements Initializable {
             
             ((VistaPredeterminadosControlador) miCargador.getController()).setControlador(this);
             
-            Scene scene = new Scene(root);
+            Scene scene = new Scene(root,305,143);
             estageActual.setScene(scene);
             estageActual.initModality(Modality.NONE);
             estageActual.show();
+            estageActual.setMinWidth(estageActual.getWidth());
+            estageActual.setMinHeight(estageActual.getHeight());
         } catch(IOException e){
             e.printStackTrace();
         }
@@ -282,10 +289,12 @@ public class VistaConfiguracionControlador implements Initializable {
             
             ((AñadirComponenteControlador) miCargador.getController()).setControlador(this);
             
-            Scene scene = new Scene(root);
+            Scene scene = new Scene(root, 725, 550);
             estageActual.setScene(scene);
             estageActual.initModality(Modality.NONE);
             estageActual.show();
+            estageActual.setMinWidth(estageActual.getWidth());
+            estageActual.setMinHeight(estageActual.getHeight());
         } catch(IOException e){
             e.printStackTrace();
         }
@@ -303,10 +312,12 @@ public class VistaConfiguracionControlador implements Initializable {
             ((VistaModificarControlador) miCargador.getController()).setControlador(this);
             ((VistaModificarControlador) miCargador.getController()).setComponente(tabla.getSelectionModel().getSelectedItem());
             
-            Scene scene = new Scene(root);
+            Scene scene = new Scene(root,305,143);
             estageActual.setScene(scene);
             estageActual.initModality(Modality.NONE);
             estageActual.show();
+            estageActual.setMinWidth(estageActual.getWidth());
+            estageActual.setMinHeight(estageActual.getHeight());
         } catch(IOException e){
             e.printStackTrace();
         }
@@ -419,22 +430,27 @@ public class VistaConfiguracionControlador implements Initializable {
 
     @FXML
     private void visualizarPresupuesto(ActionEvent event) {
-        try {
-            Stage estageActual = new Stage();
-            estageActual.setTitle("Presupuesto");
-            
-            FXMLLoader miCargador = new FXMLLoader(getClass().getResource("/vista/VistaPresupuesto.fxml"));
-            BorderPane root = (BorderPane) miCargador.load();
-            
-            ((VistaPresupuestoControlador) miCargador.getController()).setConfiguracion(this.configuracion);
-            
-            Scene scene = new Scene(root);
-            estageActual.setScene(scene);
-            estageActual.initModality(Modality.NONE);
-            estageActual.show();
-        } catch(IOException e){
-            e.printStackTrace();
-        }
+        if (!configuracion.getComponentes().isEmpty())
+            try {
+                Stage estageActual = new Stage();
+                estageActual.setTitle("Presupuesto");
+
+                FXMLLoader miCargador = new FXMLLoader(getClass().getResource("/vista/VistaPresupuesto.fxml"));
+                BorderPane root = (BorderPane) miCargador.load();
+
+                ((VistaPresupuestoControlador) miCargador.getController()).setConfiguracion(this.configuracion);
+
+                Scene scene = new Scene(root,950,675);
+                estageActual.setScene(scene);
+                estageActual.initModality(Modality.NONE);
+                estageActual.show();
+                estageActual.setMinWidth(estageActual.getWidth());
+                estageActual.setMinHeight(estageActual.getHeight());
+            } catch(IOException e){
+                e.printStackTrace();
+            }
+        else 
+            alerta("Añade algún producto.");
     }
     
     public void desactivarBotones(){

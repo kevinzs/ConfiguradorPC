@@ -14,7 +14,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="647.0" prefWidth="925.0" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controlador.VistaPresupuestoControlador">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="925.0" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controlador.VistaPresupuestoControlador">
   <bottom>
     <VBox prefHeight="137.0" prefWidth="600.0" BorderPane.alignment="CENTER">
       <children>
@@ -62,14 +62,14 @@
     </VBox>
   </bottom>
   <center>
-    <TableView id="tabla" fx:id="tabla" editable="true" prefHeight="289.0" prefWidth="905.0">
+    <TableView fx:id="tabla" editable="true" maxWidth="900.0" prefHeight="289.0" prefWidth="900.0">
       <columns>
-        <TableColumn fx:id="columnaNombre" prefWidth="415.0" text="Nombre" />
-        <TableColumn fx:id="columnaCategoria" prefWidth="131.0" text="Categoria" />
-        <TableColumn fx:id="columnaPrecio" minWidth="6.0" prefWidth="88.0" text="Precio" />
-        <TableColumn fx:id="columnaCantidad" prefWidth="87.0" text="Cantidad" />
-        <TableColumn fx:id="columnaIVA" minWidth="0.0" prefWidth="71.0" text="IVA" />
-        <TableColumn fx:id="columnaTotal" prefWidth="110.0" text="Total" />
+        <TableColumn fx:id="columnaNombre" prefWidth="401.0" resizable="false" text="Nombre" />
+        <TableColumn fx:id="columnaCategoria" prefWidth="135.0" resizable="false" text="Categoria" />
+        <TableColumn fx:id="columnaPrecio" minWidth="6.0" prefWidth="89.0" resizable="false" text="Precio" />
+        <TableColumn fx:id="columnaCantidad" prefWidth="89.0" resizable="false" text="Cantidad" />
+        <TableColumn fx:id="columnaIVA" minWidth="0.0" prefWidth="71.0" resizable="false" text="IVA" />
+        <TableColumn fx:id="columnaTotal" prefWidth="112.0" resizable="false" text="Total" />
       </columns>
     </TableView>
   </center>

@@ -18,103 +18,103 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane fx:id="bp" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="950.0" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controlador.VistaConfiguracionControlador">
-   <center>
-      <TableView fx:id="tabla" prefHeight="289.0" prefWidth="905.0" BorderPane.alignment="CENTER">
-        <columns>
-          <TableColumn fx:id="columnaNombre" maxWidth="427.0" minWidth="-1.0" prefWidth="427.0" text="Nombre" />
-          <TableColumn fx:id="columnaCategoria" maxWidth="545.0" minWidth="-1.0" prefWidth="144.0" text="Categoria" />
-            <TableColumn fx:id="columnaPrecio" maxWidth="642.0" minWidth="-1.0" prefWidth="97.0" text="Precio" />
-            <TableColumn fx:id="columnaCantidad" maxWidth="744.0" minWidth="-1.0" prefWidth="112.0" text="Cantidad" />
-            <TableColumn fx:id="columnaIVA" maxWidth="100.0" minWidth="-1.0" prefWidth="73.0" resizable="false" text="IVA" />
-            <TableColumn fx:id="columnaTotal" maxWidth="92.0" minWidth="-1.0" prefWidth="76.0" resizable="false" text="Total" />
-        </columns>
-         <BorderPane.margin>
-            <Insets bottom="10.0" left="10.0" right="10.0" />
-         </BorderPane.margin>
-      </TableView>
-   </center>
-   <top>
-      <VBox prefHeight="101.0" prefWidth="925.0" BorderPane.alignment="CENTER">
-         <children>
-            <MenuBar>
-              <menus>
-                <Menu mnemonicParsing="false" text="Configuracion">
-                  <items>
-                        <MenuItem mnemonicParsing="false" onAction="#nuevaConfiguracion" text="Nueva configuracion" />
-                        <MenuItem mnemonicParsing="false" onAction="#cargarConfiguracion" text="Cargar configuracion" />
-                        <MenuItem mnemonicParsing="false" onAction="#configuracionesPredeterminadas" text="Configuraciones predeterminadas" />
-                        <SeparatorMenuItem mnemonicParsing="false" />
-                    <MenuItem fx:id="cerrarMenu" mnemonicParsing="false" onAction="#cerrarConfigurador" text="Cerrar el programa" />
-                  </items>
-                </Menu>
-                <Menu mnemonicParsing="false" text="Editar">
-                  <items>
-                    <MenuItem fx:id="añadirMenu" mnemonicParsing="false" onAction="#añadirComponenteMenu" text="Añadir componente" />
-                        <MenuItem fx:id="modificarMenu" disable="true" mnemonicParsing="false" onAction="#modificarComponenteMenu" text="Modificar componente" />
-                        <MenuItem fx:id="eliminarMenu" disable="true" mnemonicParsing="false" onAction="#eliminarComponenteMenu" text="Eliminar componente" />
-                  </items>
-                </Menu>
-                <Menu mnemonicParsing="false" text="Ayuda">
-                  <items>
-                    <MenuItem mnemonicParsing="false" onAction="#mensajeAbout" text="About" />
-                  </items>
-                </Menu>
-              </menus>
-            </MenuBar>
-            <HBox alignment="CENTER" prefHeight="75.0" prefWidth="600.0">
-               <children>
-                  <Button fx:id="añadirButton" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#añadirAccion" prefHeight="26.0" prefWidth="80.0" styleClass="clearButton" text="Añadir" textAlignment="CENTER">
-                     <HBox.margin>
-                        <Insets right="10.0" />
-                     </HBox.margin>
-                  </Button>
-                  <Button fx:id="modificarButton" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#modificarAccion" prefHeight="26.0" prefWidth="80.0" styleClass="clearButton" text="Modificar" textAlignment="CENTER">
-                     <HBox.margin>
-                        <Insets right="10.0" />
-                     </HBox.margin>
-                  </Button>
-                  <Button fx:id="borrarButton" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#borrarAccion" prefHeight="26.0" prefWidth="80.0" styleClass="clearButton" text="Borrar" textAlignment="CENTER">
-                     <HBox.margin>
-                        <Insets right="50.0" />
-                     </HBox.margin>
-                  </Button>
-                  <Label text="Nombre de la configuración:">
-                     <HBox.margin>
-                        <Insets right="10.0" />
-                     </HBox.margin>
-                  </Label>
-                  <TextField fx:id="nombreTextfield" styleClass="textField" />
-               </children>
-            </HBox>
-         </children>
-      </VBox>
-   </top>
-   <bottom>
-      <GridPane alignment="CENTER" prefHeight="43.0" prefWidth="925.0" BorderPane.alignment="CENTER">
-        <columnConstraints>
-            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-            <ColumnConstraints hgrow="SOMETIMES" maxWidth="278.0" minWidth="10.0" prefWidth="251.0" />
-            <ColumnConstraints hgrow="SOMETIMES" maxWidth="347.0" minWidth="10.0" prefWidth="209.0" />
-          <ColumnConstraints hgrow="SOMETIMES" maxWidth="389.0" minWidth="10.0" prefWidth="224.0" />
-          <ColumnConstraints hgrow="SOMETIMES" maxWidth="273.0" minWidth="10.0" prefWidth="92.0" />
-        </columnConstraints>
-        <rowConstraints>
-          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-        </rowConstraints>
-         <children>
-            <Button fx:id="guardarButton" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#finalizarConfig" prefWidth="167.0" styleClass="convertButton" text="Guardar Configuración" textAlignment="CENTER" GridPane.columnIndex="1" />
-            <Label prefHeight="16.0" prefWidth="227.0" text="Precio Total Configuracion:" GridPane.columnIndex="3">
-               <font>
-                  <Font name="System Bold" size="13.0" />
-               </font>
+<BorderPane fx:id="bp" minHeight="-Infinity" minWidth="-Infinity" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controlador.VistaConfiguracionControlador">
+  <bottom>
+    <GridPane alignment="CENTER" prefHeight="43.0" prefWidth="925.0" BorderPane.alignment="CENTER">
+      <children>
+        <Button fx:id="guardarButton" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#finalizarConfig" prefWidth="167.0" styleClass="convertButton" text="Guardar Configuración" textAlignment="CENTER" GridPane.columnIndex="1" />
+        <Label prefHeight="16.0" prefWidth="227.0" text="Precio Total Configuracion:" GridPane.columnIndex="3">
+          <font>
+            <Font name="System Bold" size="13.0" />
+          </font>
+        </Label>
+        <Label fx:id="precioTotal" text="precioTotal" GridPane.columnIndex="4" />
+        <Button mnemonicParsing="false" onAction="#visualizarPresupuesto" text="Visualizar Presupuesto" GridPane.columnIndex="2" />
+      </children>
+      <columnConstraints>
+        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        <ColumnConstraints hgrow="SOMETIMES" maxWidth="278.0" minWidth="10.0" prefWidth="251.0" />
+        <ColumnConstraints hgrow="SOMETIMES" maxWidth="347.0" minWidth="10.0" prefWidth="209.0" />
+        <ColumnConstraints hgrow="SOMETIMES" maxWidth="389.0" minWidth="10.0" prefWidth="224.0" />
+        <ColumnConstraints hgrow="SOMETIMES" maxWidth="273.0" minWidth="10.0" prefWidth="92.0" />
+      </columnConstraints>
+      <rowConstraints>
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      </rowConstraints>
+      <BorderPane.margin>
+        <Insets bottom="10.0" />
+      </BorderPane.margin>
+    </GridPane>
+  </bottom>
+  <center>
+    <TableView fx:id="tabla" maxWidth="930.0" prefHeight="289.0" prefWidth="930.0" BorderPane.alignment="CENTER">
+      <columns>
+        <TableColumn fx:id="columnaNombre" maxWidth="427.0" minWidth="0.0" prefWidth="427.0" resizable="false" text="Nombre" />
+        <TableColumn fx:id="columnaCategoria" maxWidth="144.0" minWidth="0.0" prefWidth="144.0" resizable="false" text="Categoria" />
+        <TableColumn fx:id="columnaPrecio" maxWidth="97.0" minWidth="0.0" prefWidth="97.0" resizable="false" text="Precio" />
+        <TableColumn fx:id="columnaCantidad" maxWidth="122.0" minWidth="0.0" prefWidth="112.0" resizable="false" text="Cantidad" />
+        <TableColumn fx:id="columnaIVA" maxWidth="73.0" minWidth="0.0" prefWidth="73.0" resizable="false" text="IVA" />
+        <TableColumn fx:id="columnaTotal" maxWidth="76.0" minWidth="0.0" prefWidth="76.0" resizable="false" text="Total" />
+      </columns>
+      <BorderPane.margin>
+        <Insets bottom="10.0" left="10.0" right="10.0" />
+      </BorderPane.margin>
+    </TableView>
+  </center>
+  <top>
+    <VBox prefHeight="101.0" prefWidth="925.0" BorderPane.alignment="CENTER">
+      <children>
+        <MenuBar>
+          <menus>
+            <Menu mnemonicParsing="false" text="Configuracion">
+              <items>
+                <MenuItem mnemonicParsing="false" onAction="#nuevaConfiguracion" text="Nueva configuracion" />
+                <MenuItem mnemonicParsing="false" onAction="#cargarConfiguracion" text="Cargar configuracion" />
+                <MenuItem mnemonicParsing="false" onAction="#configuracionesPredeterminadas" text="Configuraciones predeterminadas" />
+                <SeparatorMenuItem mnemonicParsing="false" />
+                <MenuItem fx:id="cerrarMenu" mnemonicParsing="false" onAction="#cerrarConfigurador" text="Cerrar el programa" />
+              </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Editar">
+              <items>
+                <MenuItem fx:id="añadirMenu" mnemonicParsing="false" onAction="#añadirComponenteMenu" text="Añadir componente" />
+                <MenuItem fx:id="modificarMenu" disable="true" mnemonicParsing="false" onAction="#modificarComponenteMenu" text="Modificar componente" />
+                <MenuItem fx:id="eliminarMenu" disable="true" mnemonicParsing="false" onAction="#eliminarComponenteMenu" text="Eliminar componente" />
+              </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Ayuda">
+              <items>
+                <MenuItem mnemonicParsing="false" onAction="#mensajeAbout" text="About" />
+              </items>
+            </Menu>
+          </menus>
+        </MenuBar>
+        <HBox alignment="CENTER" prefHeight="75.0" prefWidth="600.0">
+          <children>
+            <Button fx:id="añadirButton" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#añadirAccion" prefHeight="26.0" prefWidth="80.0" styleClass="clearButton" text="Añadir" textAlignment="CENTER">
+              <HBox.margin>
+                <Insets right="10.0" />
+              </HBox.margin>
+            </Button>
+            <Button fx:id="modificarButton" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#modificarAccion" prefHeight="26.0" prefWidth="80.0" styleClass="clearButton" text="Modificar" textAlignment="CENTER">
+              <HBox.margin>
+                <Insets right="10.0" />
+              </HBox.margin>
+            </Button>
+            <Button fx:id="borrarButton" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#borrarAccion" prefHeight="26.0" prefWidth="80.0" styleClass="clearButton" text="Borrar" textAlignment="CENTER">
+              <HBox.margin>
+                <Insets right="50.0" />
+              </HBox.margin>
+            </Button>
+            <Label text="Nombre de la configuración:">
+              <HBox.margin>
+                <Insets right="10.0" />
+              </HBox.margin>
             </Label>
-            <Label fx:id="precioTotal" text="precioTotal" GridPane.columnIndex="4" />
-            <Button mnemonicParsing="false" onAction="#visualizarPresupuesto" text="Visualizar Presupuesto" GridPane.columnIndex="2" />
-         </children>
-         <BorderPane.margin>
-            <Insets bottom="10.0" />
-         </BorderPane.margin>
-      </GridPane>
-   </bottom>
+            <TextField fx:id="nombreTextfield" styleClass="textField" />
+          </children>
+        </HBox>
+      </children>
+    </VBox>
+  </top>
 </BorderPane>

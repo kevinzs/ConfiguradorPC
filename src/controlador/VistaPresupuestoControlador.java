@@ -13,15 +13,16 @@ import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.print.Printer;
 import javafx.print.PrinterJob;
-import javafx.scene.Node;
+import javafx.scene.control.Alert;
+import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.text.Font;
-import javafx.stage.Stage;
 import modelo.Componente;
 import modelo.PC;
 
@@ -70,6 +71,9 @@ public class VistaPresupuestoControlador implements Initializable {
         labelFecha.setText(dateFormat.format(new Date()));
         
         columnaPrecio.setStyle( "-fx-alignment: CENTER;");
+        columnaCantidad.setStyle( "-fx-alignment: CENTER;");
+        columnaIVA.setStyle( "-fx-alignment: CENTER;");
+        columnaTotal.setStyle( "-fx-alignment: CENTER;");
     }
     
     
@@ -94,15 +98,18 @@ public class VistaPresupuestoControlador implements Initializable {
 
     @FXML
     private void imprimirButtonClicked(ActionEvent event) {
-        /*Stage estageActual = new Stage();
+        Alert alert = new Alert(AlertType.INFORMATION);
+        alert.setTitle("Diálogo de información");
+        alert.setHeaderText(null);
+        alert.setContentText("Imprimiendo el presupuesto.");
+        alert.showAndWait();
+
+        Printer printer = Printer.getDefaultPrinter();
         PrinterJob job = PrinterJob.createPrinterJob();
-        if (job != null && job.showPrintDialog(estageActual.getScene().getWindow()));
-            boolean success = job.printPage(estageActual);
-            if (success)
-                job.endJob();*/
-        /*Node nodo = (Node) event.getSource();
-        PrinterJob printerJob = PrinterJob.createPrinterJob();
-        if(printerJob.printPage(nodo))
-            printerJob.endJob();*/
+        if(job != null){
+            job.getPrinter();
+            boolean succes = job.printPage(tabla);
+            if(succes) job.endJob();
+        }
     }
 }
