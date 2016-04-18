@@ -17,8 +17,6 @@ public class ConfiguradorPC extends Application{
         Scene scene = new Scene(root);
         
         stage.setScene(scene);
-        stage.setMinHeight(500);
-        stage.setMinWidth(925);
         stage.setTitle("Configurador de ordenadores");
 
         stage.show();

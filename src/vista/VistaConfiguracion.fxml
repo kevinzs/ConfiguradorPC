@@ -18,16 +18,16 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane fx:id="bp" minHeight="500.0" minWidth="925.0" prefHeight="500.0" prefWidth="925.0" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controlador.VistaConfiguracionControlador">
+<BorderPane fx:id="bp" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="950.0" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controlador.VistaConfiguracionControlador">
    <center>
-      <TableView fx:id="tabla" editable="true" prefHeight="289.0" prefWidth="905.0" BorderPane.alignment="CENTER">
+      <TableView fx:id="tabla" prefHeight="289.0" prefWidth="905.0" BorderPane.alignment="CENTER">
         <columns>
-          <TableColumn fx:id="columnaNombre" prefWidth="415.0" text="Nombre" />
-          <TableColumn fx:id="columnaCategoria" prefWidth="131.0" text="Categoria" />
-            <TableColumn fx:id="columnaPrecio" minWidth="6.0" prefWidth="88.0" text="Precio" />
-            <TableColumn fx:id="columnaCantidad" prefWidth="87.0" text="Cantidad" />
-            <TableColumn fx:id="columnaIVA" minWidth="0.0" prefWidth="71.0" text="IVA" />
-            <TableColumn fx:id="columnaTotal" prefWidth="110.0" text="Total" />
+          <TableColumn fx:id="columnaNombre" maxWidth="427.0" minWidth="-1.0" prefWidth="427.0" text="Nombre" />
+          <TableColumn fx:id="columnaCategoria" maxWidth="545.0" minWidth="-1.0" prefWidth="144.0" text="Categoria" />
+            <TableColumn fx:id="columnaPrecio" maxWidth="642.0" minWidth="-1.0" prefWidth="97.0" text="Precio" />
+            <TableColumn fx:id="columnaCantidad" maxWidth="744.0" minWidth="-1.0" prefWidth="112.0" text="Cantidad" />
+            <TableColumn fx:id="columnaIVA" maxWidth="100.0" minWidth="-1.0" prefWidth="73.0" resizable="false" text="IVA" />
+            <TableColumn fx:id="columnaTotal" maxWidth="92.0" minWidth="-1.0" prefWidth="76.0" resizable="false" text="Total" />
         </columns>
          <BorderPane.margin>
             <Insets bottom="10.0" left="10.0" right="10.0" />
@@ -45,7 +45,7 @@
                         <MenuItem mnemonicParsing="false" onAction="#cargarConfiguracion" text="Cargar configuracion" />
                         <MenuItem mnemonicParsing="false" onAction="#configuracionesPredeterminadas" text="Configuraciones predeterminadas" />
                         <SeparatorMenuItem mnemonicParsing="false" />
-                    <MenuItem fx:id="cerrarMenu" mnemonicParsing="false" onAction="#cerrarConfigurador" text="Cerrar" />
+                    <MenuItem fx:id="cerrarMenu" mnemonicParsing="false" onAction="#cerrarConfigurador" text="Cerrar el programa" />
                   </items>
                 </Menu>
                 <Menu mnemonicParsing="false" text="Editar">

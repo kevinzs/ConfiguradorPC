@@ -17,6 +17,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Node;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Alert.AlertType;
@@ -75,7 +76,7 @@ public class VistaConfiguracionControlador implements Initializable {
     
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        bp.setMinSize(925, 500);
+        //bp.setMinSize(1000, 600);
         configuracion = new PC();
         pcList = new ListPcWrapper();
         actualizarPcList();
@@ -258,7 +259,16 @@ public class VistaConfiguracionControlador implements Initializable {
 
     @FXML
     private void cerrarConfigurador(ActionEvent event) {
-        Platform.exit();
+        Alert alert = new Alert(AlertType.CONFIRMATION);
+        alert.setTitle("Diálogo de alerta");
+        alert.setHeaderText("¡CUIDADO!");
+        alert.setContentText("Si cierras el programa los presupuestos que tengas abiertos"
+                + " no se guardarán.");
+        alert.getDialogPane().getChildren().stream().filter(node -> node instanceof Label).forEach(node -> ((Label)node).setMinHeight(Region.USE_PREF_SIZE));
+
+        Optional<ButtonType> result = alert.showAndWait();
+        if (result.isPresent() && result.get() == ButtonType.OK)
+            Platform.exit();
     }
  
     @FXML
@@ -283,6 +293,23 @@ public class VistaConfiguracionControlador implements Initializable {
 
     @FXML
     private void modificarComponenteMenu(ActionEvent event) {
+        try {
+            Stage estageActual = new Stage();
+            estageActual.setTitle("Modificar Componente");
+            
+            FXMLLoader miCargador = new FXMLLoader(getClass().getResource("/vista/VistaModificar.fxml"));
+            BorderPane root = (BorderPane) miCargador.load();
+            
+            ((VistaModificarControlador) miCargador.getController()).setControlador(this);
+            ((VistaModificarControlador) miCargador.getController()).setComponente(tabla.getSelectionModel().getSelectedItem());
+            
+            Scene scene = new Scene(root);
+            estageActual.setScene(scene);
+            estageActual.initModality(Modality.NONE);
+            estageActual.show();
+        } catch(IOException e){
+            e.printStackTrace();
+        }
     }
 
     @FXML
