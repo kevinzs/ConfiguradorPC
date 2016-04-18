@@ -28,12 +28,15 @@ public class Componente extends Product{
         this.stock = super.getStock();
         this.categoria = super.getCategory();
         this.cantidad = cantidad;
+        
         this.iva = precio*0.21;
+        this.iva = Math.round(this.iva * 10);
+        this.iva = this.iva/10;
+        
         total = cantidad*(precio+this.iva);
-        NumberFormat nf = NumberFormat.getNumberInstance(Locale.US);
-        DecimalFormat formateador = (DecimalFormat) nf;
-        this.total = Double.parseDouble(formateador.format(this.total));
-        this.iva = Double.parseDouble(formateador.format(this.iva));
+        this.total = Math.round(this.total * 10);
+        this.total = this.total/10;
+        
         formateoCategoria();
     }
     

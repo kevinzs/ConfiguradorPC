@@ -4,9 +4,13 @@ Cambiar:
 
 Bug:
 
-	Ventana modificar peta con nueva cantidad grande. Por algo del formateo
-	Si haces grande las ventanas las tablas tienen 1 columna extra	
-	Arreglar error que hace que si pasa de mil euros pega error. La causa del error esta en el formateo de los numeros.
+	Ventana modificar peta con nueva cantidad grande. 
+		- Causa: Formateo de los numeros.
+	Si haces grande las ventanas las tablas tienen 1 columna extra.
+		- Causa: si se fija que se expandan las columnas con la ventana algunas columnas se quedan demasiado grandes
+				para la informacion que muestran. Si sabes como solucionar eso.
+	Arreglar error que hace que si pasa de mil euros pega error. 
+		- Causa: formateo del precio total y el iva de un componente.
 
 Implementar:
 
