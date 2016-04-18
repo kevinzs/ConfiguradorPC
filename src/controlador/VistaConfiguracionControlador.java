@@ -16,7 +16,6 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
-import javafx.scene.Node;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Alert.AlertType;
@@ -398,7 +397,7 @@ public class VistaConfiguracionControlador implements Initializable {
             FXMLLoader miCargador = new FXMLLoader(getClass().getResource("/vista/VistaPresupuesto.fxml"));
             BorderPane root = (BorderPane) miCargador.load();
             
-            ((VistaPresupuestoControlador) miCargador.getController()).setConfiguracion(configuracion);
+            ((VistaPresupuestoControlador) miCargador.getController()).setConfiguracion(this.configuracion);
             
             Scene scene = new Scene(root);
             estageActual.setScene(scene);

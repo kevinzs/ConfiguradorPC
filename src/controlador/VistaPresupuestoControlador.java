@@ -13,25 +13,22 @@ import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.print.PrinterJob;
-import javafx.scene.Node;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.text.Font;
-import javafx.stage.Stage;
 import modelo.Componente;
 import modelo.PC;
 
 
 public class VistaPresupuestoControlador implements Initializable {
     
-    private PC configuracion;
+    private PC configuracion = null;
     private ObservableList<Componente> datos = null;
 
-    private TableView<Componente> tabla;
+    @FXML private TableView<Componente> tabla;
     @FXML private TableColumn<Componente, String> columnaNombre;
     @FXML private TableColumn<Componente, String> columnaCategoria;
     @FXML private TableColumn<Componente, Double> columnaPrecio;
@@ -50,6 +47,8 @@ public class VistaPresupuestoControlador implements Initializable {
     double doublePrecioTotal;
     double doubleTotalSinIVA;
     double doubleTotalIVA;
+    
+    @FXML private Button buttonImprimir;
 
 
 
@@ -70,7 +69,7 @@ public class VistaPresupuestoControlador implements Initializable {
         columnaPrecio.setStyle( "-fx-alignment: CENTER;");
     }
     
-
+    
     
     public void setConfiguracion(PC configuracion){
         this.configuracion = configuracion;
@@ -85,8 +84,9 @@ public class VistaPresupuestoControlador implements Initializable {
         labelPrecioTotal.setText(currencyFormatter.format(doublePrecioTotal));
         labelTotalSinIVA.setText(currencyFormatter.format(doubleTotalSinIVA));
         labelTotalIVA.setText(currencyFormatter.format(doubleTotalIVA));
+        
         datos = FXCollections.observableArrayList(configuracion.getComponentes());
-        //tabla.setItems(datos); BUG: SALTA NULL POINTER 
+        tabla.setItems(datos);
     }
 
     @FXML

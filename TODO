@@ -8,7 +8,6 @@ Bug:
 
 Implementar:
 
-	Visualizar presupuesto, que aparezcan los productos del pc en la tabla
 	Boton cerrar del toolbar -> He intentado y no se como. Si no lo conseguimos quitamos ese boton y au
 	(OPCIONAL) Imprimir (Boton imprimir en visualizador)
 	(OPCIONAL) Keyboard shortcuts
@@ -18,7 +17,7 @@ Implementar:
 
 
 HECHO:
-
+	Visualizar presupuesto, que aparezcan los productos del pc en la tabla
 	Aplicar NumberFormat a precio total (¿Es posible?)
 	Cambio condicion isInteger para que compruebe si (cantidad > 0)
 	Al limpiar la busqueda que guarde la categoria
